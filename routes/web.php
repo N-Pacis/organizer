@@ -20,3 +20,30 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard.dashboard');
 })->name('dashboard');
+
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    
+    Route::get("/dashboard",function(){
+        return view('dashboard.dashboard');      
+    });
+
+    Route::get("/students",function(){
+        return view('dashboard.dashboard');      
+    });
+    
+    Route::get("/teachers",function(){
+        return view('dashboard.dashboard');      
+    });
+
+    Route::get("/workers",function(){
+        return view('dashboard.dashboard');      
+    });
+
+    Route::get("/income",function(){
+        return view('dashboard.dashboard');      
+    });
+
+    Route::get("/liabilities",function(){
+        return view('dashboard.dashboard');      
+    });
+});
