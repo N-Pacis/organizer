@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.admin-dashboard{
+    display: flex;
+    width: 100%;
+}
+.sidebar{
+    width: 25%;
+    background-color: rgb(235, 233, 233);
+    height: 100vh;
+}
+.sidebar-logo{
+    padding:0% 17%;
+}
