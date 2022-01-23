@@ -9,25 +9,25 @@
     </head>
     <body>
         <div class="admin-dashboard">
-            <div class="sidebar">
-              <div class="sidebar-logo">
-                <x-jet-application-logo></x-jet-application-logo>
-              </div>
-              <ul>
-                  <li>
-                      <h3>Dashboard</h3>
-                  </li>
-                  <li>
-                    <h3>Students</h3>
-                </li>
-                <li>
-                    <h3>Teachers</h3>
-                </li>
-                <li>
-                    <h3>Computers</h3>
-                </li>
-              </ul>
-            </div>
+            <x-sidebar></x-sidebar>
+            @if (request()->is('dashboard'))
+                <x-admin-dashboard></x-admin-dashboard>
+            @endif
+            @if (request()->is('students'))
+                <x-student-page></x-student-page>
+            @endif
+            @if (request()->is('teachers'))
+                <x-teachers-page></x-teachers-page>
+            @endif
+            @if (request()->is('workers'))
+                <x-workers-page></x-workers-page>
+            @endif
+            @if (request()->is('income'))
+                <x-income-page></x-income-page>
+            @endif 
+            @if (request()->is('liabilities'))
+                <x-liabilities-page></x-liabilities-page>
+            @endif                                               
         </div>
     </body>
 </html>
