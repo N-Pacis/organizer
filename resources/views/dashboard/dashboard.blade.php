@@ -6,10 +6,13 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
         <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
     <body>
         <div class="admin-dashboard">
-            <x-sidebar></x-sidebar>
+           <div class="sidebar-div">
+                <x-sidebar></x-sidebar>
+           </div>
             @if (request()->is('dashboard'))
                 <x-admin-dashboard></x-admin-dashboard>
             @endif
