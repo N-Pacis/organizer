@@ -63,5 +63,45 @@
     color: rgb(48, 48, 48);
 }
 .table-div{
-    padding: 5%;
+    padding: 5% 2%;
+}
+.add-student-btn{
+    background-color: rgb(29, 74, 170);
+    margin-left: 82%;
+    margin-top: 2%;
+}
+.add-student-btn>svg{
+    margin-right: 2%;
+}
+.add-student-btn>p{
+    white-space:nowrap;
+    margin-top: 1px;
+}
+.modal-div{
+    background-color: rgba(48, 48, 48,0.5) !important;
+}
+.form-div{
+    margin-top: 10%;
+    width: 30%;
+}
+.add-student-form-btn{
+    background-color: rgb(29, 74, 170);
+}
+.add-student-form-btn:hover{
+    background-color: rgb(22, 59, 139);
+}
+.error-message{
+    width: 90%;
+    list-style: initial;
+    margin-left: 10%;
+}
+.error-message>li{
+    color: rgb(248, 15, 15);
+    margin: 2% 0%;
+}
+.success-message{
+    background-color: rgb(73, 192, 73);
+    width: 96%;
+    margin: 2% 0% 2% 2%;
+    margin-bottom: -1%;
 }
