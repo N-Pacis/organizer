@@ -24,26 +24,24 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     
     Route::get("/dashboard",function(){
-        return view('dashboard.dashboard');      
+        return view('dashboard.admin-dashboard-page');      
     });
 
-    Route::get("/students",function(){
-        return view('dashboard.dashboard');      
-    });
-    
     Route::get("/teachers",function(){
-        return view('dashboard.dashboard');      
+        return view('dashboard.teachers-page');      
     });
 
     Route::get("/workers",function(){
-        return view('dashboard.dashboard');      
+        return view('dashboard.workers-page');      
     });
 
     Route::get("/income",function(){
-        return view('dashboard.dashboard');      
+        return view('dashboard.income-page');      
     });
 
     Route::get("/liabilities",function(){
-        return view('dashboard.dashboard');      
+        return view('dashboard.liabilities-page');      
     });
+
+    Route::resource('students', 'App\Http\Controllers\StudentController');
 });
