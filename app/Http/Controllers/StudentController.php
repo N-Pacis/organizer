@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class StudentController extends Controller
 {
@@ -44,7 +45,7 @@ class StudentController extends Controller
             $input['picture'] = time().'.'.$request->picture->extension();
             $request->picture->move(public_path('profile-pictures'),$input['picture']);
         }
-
+        $input['student_id'] = Str::random(5);
         Student::create($input);
         return redirect('students')->with('flash_message','Student Added');
     }
