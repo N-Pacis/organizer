@@ -14,8 +14,12 @@
                     @endforeach
                 </ul>
             @endif
-            <form method="POST" action="{{route('students.store')}}" class="w-full">
+            <form method="POST" action="{{route('students.store')}}" class="w-full" enctype="multipart/form-data">
                 @csrf
+                <div class="mb-4">
+                    <label for="picture" class="block text-gray-700 text-sm font-semibold mb-2">Picture</label>
+                    <input id="picture" class="block mt-1 w-full appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" type="file" name="picture"/>
+                </div>
                 <div class="mb-4">
                     <label for="firstname" class="block text-gray-700 text-sm font-semibold mb-2">Firstname</label>
                     <input id="firstname" class="block mt-1 w-full appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" type="firstname" name="firstname" :value="old('firstname')" required  />
@@ -92,7 +96,7 @@
                 @foreach ($students_list as $student)
                     <tr>
                         <td class="px-5 py-5 border-b border-gray-200 bg-white">
-                            <img src="https://ca.slack-edge.com/TG3A11QGL-USRHLRK0D-f40e5918ae8d-512" alt="Nkubito Pacis" class="w-10 h-10 flex-shrink-0 rounded-full">
+                            <img src="profile-pictures/{{$student->picture}}" alt="Nkubito Pacis" class="w-10 h-10 flex-shrink-0 rounded-full profile-picture">
                         </td>
                         <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
                             <p class="text-gray-900 whitespace-no-wrap">{{$student->id}}</p>

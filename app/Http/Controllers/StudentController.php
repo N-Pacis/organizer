@@ -27,6 +27,7 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'picture'=>'image|mimes:png,jpg,jpeg|max:2048',
             'firstname'=>'required',
             'lastname'=>'required',
             'enrolled_in'=>'required',
@@ -35,6 +36,15 @@ class StudentController extends Controller
         $input = $request->all();
         $user_id = auth()->user()->id;
         $input['added_by'] = $user_id;
+
+        if(!$request->picture){
+            $input['picture'] = "default-profile-pic.jpg";
+        }
+        else{
+            $input['picture'] = time().'.'.$request->picture->extension();
+            $request->picture->move(public_path('profile-pictures'),$input['picture']);
+        }
+
         Student::create($input);
         return redirect('students')->with('flash_message','Student Added');
     }

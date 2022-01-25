@@ -105,3 +105,6 @@
     margin: 2% 0% 2% 2%;
     margin-bottom: -1%;
 }
+.profile-picture{
+    object-fit: contain;
+}
