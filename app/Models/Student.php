@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
-    protected $fillable = ['picture','firstname','lastname','phone_number','address','enrolled_in','status','added_by'];
+    protected $fillable = ['student_id','picture','firstname','lastname','phone_number','address','enrolled_in','status','added_by'];
+    protected $primary_key = 'student_id';
+    protected $keyType = 'string';
+    public $incrementing = false;
     use HasFactory;
 }
