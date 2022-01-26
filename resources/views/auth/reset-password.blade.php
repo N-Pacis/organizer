@@ -7,7 +7,7 @@
        <x-form-errors></x-form-errors>
 
         <form method="POST" action="{{ route('password.update') }}">
-            {{ csrf_field() }}
+            @csrf
 
             <input type="hidden" name="token" value="{{ $request->route('token') }}">
 

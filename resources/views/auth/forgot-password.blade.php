@@ -17,7 +17,7 @@
         <x-form-errors></x-form-errors>
 
         <form method="POST" action="{{ route('password.email') }}">
-            {{ csrf_field() }}
+            @csrf
 
             <div class="block">
                 <x-jet-label for="email" value="{{ __('Email') }}" />
