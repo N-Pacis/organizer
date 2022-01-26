@@ -15,7 +15,7 @@
                 </ul>
             @endif
             <form method="POST" action="{{route('students.store')}}" class="w-full" enctype="multipart/form-data">
-                @csrf
+                {{ csrf_field() }}
                 <div class="mb-4">
                     <label for="picture" class="block text-gray-700 text-sm font-semibold mb-2">Picture</label>
                     <input id="picture" class="block mt-1 w-full appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none" type="file" name="picture"/>

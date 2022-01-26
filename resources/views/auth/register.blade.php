@@ -7,7 +7,7 @@
         <x-jet-validation-errors class="mb-4" />
 
         <form method="POST" action="{{ route('register') }}">
-            @csrf
+            {{ csrf_field() }}
 
             <div>
                 <x-jet-label for="name" value="{{ __('Name') }}" />
