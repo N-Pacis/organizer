@@ -2,7 +2,7 @@
     <body>
             <div class="sidebar">
               <div class="sidebar-logo">
-                <x-jet-application-logo></x-jet-application-logo>
+                <x-application-logo></x-application-logo>
               </div>
               <ul class="dashboard-items-group">
                   <li class="dashboard-item">  
