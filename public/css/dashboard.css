@@ -193,3 +193,35 @@
     height: 50px;
     white-space: nowrap;
 }
+
+.toggle-btn{
+    position: absolute;
+    top: calc(100vh - 70%);
+    background-color: dodgerblue;
+    padding: 1.7% 1.7%;
+    border-radius: 8px;
+}
+
+
+@media screen and (max-width: 600px){
+    body{
+        width: 100%;
+        overflow-x: hidden !important;
+    }
+    .table-div{
+        width: 100%;
+        padding-left: 0% !important;
+        padding-right: 0%;
+        overflow-x: auto;
+        margin-left: 2%;
+    }
+    .add-student-btn{
+        margin-left: 2% !important;
+    }
+    .sidebar{
+        display: none;
+    }
+    .sidebar-div{
+        width: 0%;
+    }
+}
