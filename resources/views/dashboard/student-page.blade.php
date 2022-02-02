@@ -77,7 +77,7 @@
             <p class="text-center font-bold text-base text-white py-3">{{$message}}</p>
         </div>    
     @endif
-    <div class="table-div w-full px-5 py-5">
+    <div class="table-div w-full">
         <table class="w-full leading-normal">
             <thead>
                 <tr class="table-header">

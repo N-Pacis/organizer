@@ -201,6 +201,11 @@
     padding: 1.7% 1.7%;
     border-radius: 8px;
 }
+.close-sidebar{
+    display:none;
+    left: 59%;
+    top: calc(100vh - 60%);
+}
 
 
 @media screen and (max-width: 600px){
@@ -208,20 +213,35 @@
         width: 100%;
         overflow-x: hidden !important;
     }
+    .main-page{
+        width: 100%;
+    }
     .table-div{
         width: 100%;
-        padding-left: 0% !important;
-        padding-right: 0%;
+        padding: 2% 0% !important;
         overflow-x: auto;
         margin-left: 2%;
+    }
+    table{
+        width: 1000px !important;
     }
     .add-student-btn{
         margin-left: 2% !important;
     }
-    .sidebar{
-        display: none;
-    }
     .sidebar-div{
-        width: 0%;
+        display: none;
+        background: rgba(0, 0, 0, 0.5) !important;
+        width: 100% !important;
+        height: 100vh;
+        position: absolute;
+    }
+    .sidebar{
+        box-shadow: 0px 0px 0px transparent !important;
+        width: 60%;
+        position: relative !important;
+    }
+    .form-div{
+        width: 70% !important;
+        margin-bottom: 10% !important;
     }
 }
