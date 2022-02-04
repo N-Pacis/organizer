@@ -94,7 +94,7 @@
             </thead>
             <tbody>
                 @foreach($students_list as $student)
-                    <tr>
+                    <tr onclick='window.location="{{url("/students/".$student->student_id)}}"'>
                         <td class="px-5 py-5 border-b border-gray-200 bg-white">
                             <img src="profile-pictures/{{$student->picture}}" alt="Nkubito Pacis" class="w-10 h-10 flex-shrink-0 rounded-full profile-picture">
                         </td>

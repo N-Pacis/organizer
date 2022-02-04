@@ -65,6 +65,9 @@
 .table-div{
     padding: 5% 2%;
 }
+tr{
+   cursor: pointer; 
+}
 .add-student-btn{
     background-color: rgb(29, 74, 170);
     margin-left: 82%;
@@ -200,6 +203,7 @@
     background-color: dodgerblue;
     padding: 1.7% 1.7%;
     border-radius: 8px;
+    display: none;
 }
 .close-sidebar{
     display:none;
